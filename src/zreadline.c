@@ -70,6 +70,7 @@ int readline_internal(unsigned int timeout) {
 
   readline_ptr = readline_buffer;
   printf("\n%s\n", readline_ptr);
+  printf("readline_fd: %d\n", readline_fd);
   readline_left = read(readline_fd, readline_ptr, readline_readnum);
   if (!no_timeout)
     alarm(0);
